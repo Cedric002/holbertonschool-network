@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-sudo -tunlp
+# To list all TCP or UDP ports that are being listened on, including
+# the services using the ports and the socket status.
+netstat -tunlp
