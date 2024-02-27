@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Script that ping an IP address passed as an argument
+if [ -z "$1" ]; then
+    echo "Please provide an IP address as an argument."
+    exit  1
+fi
+
+ping -c  1 "$1" > /dev/null  2>&1
+if [ $? -eq  0 ]; then
+    echo "The address $1 is reachable."
+else
+    echo "The address $1 is unreachable."
+fi
